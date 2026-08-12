@@ -98,17 +98,6 @@ export default function Hero() {
             </a>
 
             <a
-              href="#PLACEHOLDER_RESUME_PDF"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-medium text-sm border transition-colors hover:border-[var(--amber)]"
-              style={{
-                borderColor: "var(--border-strong)",
-                color: "var(--text)",
-              }}
-            >
-              Download Resume
-            </a>
-
-            <a
               href="#contact"
               className="link-underline font-mono text-sm ml-1"
               style={{ color: "var(--text-muted)" }}

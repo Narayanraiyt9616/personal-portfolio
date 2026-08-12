@@ -51,15 +51,6 @@ export default function Navbar({ theme, toggleTheme }) {
 
         <div className="hidden md:flex items-center gap-4">
           <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
-          <a
-            href={socials.resume}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full font-mono text-xs font-medium transition-transform hover:-translate-y-0.5"
-            style={{ background: "var(--amber)", color: "var(--ink)" }}
-          >
-            <FileDown size={14} /> Resume
-          </a>
         </div>
 
         <div className="flex items-center gap-3 md:hidden">
@@ -97,17 +88,6 @@ export default function Navbar({ theme, toggleTheme }) {
               </a>
             </li>
           ))}
-          <li className="pt-4">
-            <a
-              href={socials.resume}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-mono text-xs font-medium"
-              style={{ background: "var(--amber)", color: "var(--ink)" }}
-            >
-              <FileDown size={14} /> Download Resume
-            </a>
-          </li>
         </ul>
       </div>
     </header>

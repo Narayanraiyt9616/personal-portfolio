@@ -5,9 +5,6 @@ import { navLinks } from "../utils/constants";
 
 const socialLinks = [
   { icon: GithubIcon, href: socials.github, label: "GitHub" },
-  { icon: LinkedinIcon, href: socials.linkedin, label: "LinkedIn" },
-  { icon: InstagramIcon, href: socials.instagram, label: "Instagram" },
-  { icon: Mail, href: `mailto:${profile.email}`, label: "Email" },
 ];
 
 export default function Footer() {

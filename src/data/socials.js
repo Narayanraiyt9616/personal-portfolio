@@ -9,10 +9,7 @@ export const profile = {
 };
 
 export const socials = {
-  github: "#PLACEHOLDER_GITHUB_URL",
-  linkedin: "#PLACEHOLDER_LINKEDIN_URL",
-  instagram: "#PLACEHOLDER_INSTAGRAM_URL",
-  resume: "#PLACEHOLDER_RESUME_PDF",
+  github: "https://github.com/Narayanraiyt9616",
 };
 
 export const profileImage = null; // Replace with an imported image, e.g. import img from '../assets/images/profile.jpg'
