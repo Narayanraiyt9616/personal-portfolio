@@ -1,47 +1,57 @@
-import { useTheme } from "./hooks/useTheme";
+import { useEffect } from "react";
 import ScrollProgress from "./components/ScrollProgress";
-import AnimatedCursor from "./components/AnimatedCursor";
 import BackToTop from "./components/BackToTop";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import IntroStrip from "./components/IntroStrip";
 import About from "./components/About";
-import Stats from "./components/Stats";
-import TechStack from "./components/TechStack";
 import Skills from "./components/Skills";
+import Projects from "./components/Projects";
 import Experience from "./components/Experience";
-import GithubSection from "./components/GithubSection";
+import TechStack from "./components/TechStack";
+import Stats from "./components/Stats";
 import Achievements from "./components/Achievements";
 import Services from "./components/Services";
 import WhyWorkWithMe from "./components/WhyWorkWithMe";
 import Process from "./components/Process";
-import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 export default function App() {
-  const { theme, toggleTheme } = useTheme();
+  useEffect(() => {
+    if (window.location.hash) {
+      const hash = window.location.hash;
+      const timer = setTimeout(() => {
+        try {
+          const el = document.querySelector(hash);
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+          }
+        } catch {
+          // ignore invalid query selector
+        }
+      }, 150);
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   return (
-    <div style={{ background: "var(--ink)" }}>
+    <div className="min-h-screen text-[#64748B]" style={{ backgroundColor: "#FFF8D6" }}>
       <ScrollProgress />
-      <AnimatedCursor />
-      <Navbar theme={theme} toggleTheme={toggleTheme} />
+      <Navbar />
       <main>
         <Hero />
         <IntroStrip />
         <About />
-        <Stats />
-        <TechStack />
         <Skills />
+        <Projects />
         <Experience />
-
-        <GithubSection />
+        <TechStack />
+        <Stats />
         <Achievements />
         <Services />
         <WhyWorkWithMe />
         <Process />
-        <Testimonials />
         <Contact />
       </main>
       <Footer />

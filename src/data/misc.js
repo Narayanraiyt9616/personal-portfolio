@@ -6,12 +6,12 @@ export const achievements = [
 ];
 
 export const services = [
-  { title: "Frontend Development", desc: "Modern, responsive interfaces built with React and modern CSS." },
-  { title: "Full-Stack Applications", desc: "Complete applications spanning frontend, backend and database." },
-  { title: "REST APIs", desc: "Clean, scalable API architecture designed around real use cases." },
-  { title: "Dashboard Applications", desc: "Admin panels, analytics dashboards and management systems." },
-  { title: "Responsive Websites", desc: "Mobile-first builds that hold up across every device." },
-  { title: "UI Implementation", desc: "Turning designs into production-ready, pixel-conscious interfaces." },
+  { id: "frontend-development", title: "Frontend Development", desc: "Modern, responsive interfaces built with React and modern CSS." },
+  { id: "backend-development", title: "Backend Development", desc: "Robust server-side architecture, database integration, and authentication systems." },
+  { id: "fullstack-development", title: "Full-Stack Development", desc: "Complete end-to-end web applications spanning frontend, backend, and databases." },
+  { id: "responsive-web-design", title: "Responsive Web Design", desc: "Mobile-first layouts and accessible designs tuned across every device and screen." },
+  { id: "api-development", title: "API Development", desc: "Clean, scalable RESTful API architecture designed around real-world use cases." },
+  { id: "ui-implementation", title: "UI Implementation", desc: "Turning Figma and design mockups into pixel-conscious, interactive code." },
 ];
 
 export const whyWorkWithMe = [

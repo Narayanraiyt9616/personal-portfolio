@@ -1,19 +1,30 @@
 export default function SectionHeading({ path, title, subtitle, align = "left" }) {
   return (
-    <div className={`mb-14 ${align === "center" ? "text-center mx-auto max-w-2xl" : ""}`}>
+    <div className={`mb-8 sm:mb-10 ${align === "center" ? "text-center mx-auto max-w-2xl" : "max-w-3xl"}`}>
       {path && (
         <div
-          className="font-mono text-xs tracking-wide mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-full border"
-          style={{ color: "var(--amber)", borderColor: "var(--border)" }}
+          className="font-mono text-xs font-semibold tracking-wider uppercase mb-3.5 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border shadow-2xs"
+          style={{
+            backgroundColor: "#FFFFFF",
+            borderColor: "#F3DCCB",
+            color: "#6A2ED9",
+          }}
         >
-          <span aria-hidden="true">~/</span>{path}
+          <span aria-hidden="true" style={{ color: "#FF6B6B" }}>~/</span>
+          <span>{path}</span>
         </div>
       )}
-      <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight" style={{ color: "var(--text)" }}>
+      <h2
+        className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-tight"
+        style={{ color: "#1F2937" }}
+      >
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-4 text-base sm:text-lg" style={{ color: "var(--text-muted)" }}>
+        <p
+          className="mt-3.5 text-base sm:text-lg leading-relaxed"
+          style={{ color: "#64748B" }}
+        >
           {subtitle}
         </p>
       )}
